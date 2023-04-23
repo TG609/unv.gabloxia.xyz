@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
+
+:root {
+  --body-fondo: #151515;
+  --texto: #f5f5f5;
+  --input-fondo: #262626;
+  --input-texto: #f5f5f5;
+  --input-placeholder: #808080;
+  --textarea-fondo: #262626;
+  --textarea-texto: #f5f5f5;
+  --boton-fondo: #82bffb;
+  /* menor saturación del color original #5FD7FE */
+  --boton-texto: #202020;
+  --boton-hover: #66aee3;
+  /* menor saturación del color original #007bff */
+  --boton-active: #366289;
+  /* menor saturación del color original #002c5b */
+  --boton-pressed: #366289;
+  --tabla-fondo: #262626;
+  --tabla-texto: #f5f5f5;
+  --tabla-hover: #1c1c1c;
+  --transicion: 0.3s ease-in-out;
+
+
+}
+
+a {
+  -webkit-user-select: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+  padding: 0;
+}
+
+input,
+textarea {
+  outline: none;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--input-fondo);
+  color: var(--input-texto);
+  border: none;
+  /* Elimina los estilos de borde /
+outline: none; / Elimina los estilos de outline /
+/ Agrega cualquier otro estilo personalizado que desees */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+textarea {
+  background-color: var(--textarea-fondo);
+  color: var(--textarea-texto);
+}
+
+
+button:hover {
+  background-color: var(--boton-hover);
+}
+
+button:active {
+  background-color: var(--boton-active);
+}
+
+button:active:focus {
+  background-color: var(--boton-pressed);
+}
+
+
+
+button {
+  padding: var(--boton-padding);
+  background-color: var(--boton-fondo);
+  color: var(--boton-texto);
+  transition: background-color var(--transicion);
+  border-radius: var(--border-radius);
+  border: none;
+  /* Elimina los estilos de borde */
+  outline: none;
+  /* Elimina los estilos de outline */
+  cursor: pointer;
+  /* Agrega un estilo de cursor */
+  /* Agrega cualquier otro estilo personalizado que desees */
+}
+
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  background-color: var(--body-fondo);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  animation: fade 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
